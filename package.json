@@ -1,0 +1,36 @@
+{
+  "name": "intellji",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec babel-node src/worker.js",
+    "worker": "npm run dev",
+    "start": "npm run dev",
+    "restart": "rimraf dist && npm run start",
+    "build": "babel src -d dist",
+    "heroku-postbuild": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.6",
+    "rimraff": "0.0.1-security"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "convict": "^6.0.0",
+    "core-js": "^3.8.1",
+    "discord.js": "^12.5.1",
+    "lodash": "^4.17.20",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
